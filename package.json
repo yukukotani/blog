@@ -4,12 +4,10 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-svelte3": "^1.2.3",
     "mini-css-extract-plugin": "^0.6.0",
-    "prettier": "^1.17.1",
-    "prettier-plugin-svelte": "^0.6.0",
     "serve": "^11.0.0",
     "style-loader": "^0.23.1",
     "svelte": "^3.0.0",
@@ -21,5 +19,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "webpack-dev-server --content-base public"
+  },
+  "dependencies": {
+    "contentful": "^7.6.0"
   }
 }

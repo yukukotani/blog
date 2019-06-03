@@ -4,10 +4,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "prettier",
     "svelte3"
   ],
   "rules": {
-    "prettier/prettier": "error"
   }
 }
