@@ -1,11 +1,19 @@
 <script>
-  export let name;
+  import { onMount } from 'svelte';
+  import { fetchEntries } from "./api";
+
+  const posts = [];
+
+  onMount(async () => {
+    const res = await fetchEntries();
+    console.log(res);
+	});
 </script>
 
-<style>
+<style scoped>
   h1 {
     color: purple;
   }
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>こたにゆうくのブログ</h1>
