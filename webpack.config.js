@@ -22,7 +22,6 @@ module.exports = {
     rules: [
       {
         test: /\.svelte$/,
-        exclude: /node_modules/,
         use: {
           loader: "svelte-loader",
           options: {
@@ -53,5 +52,8 @@ module.exports = {
       ? new Dotenv()
       : new webpack.EnvironmentPlugin(["SPACE_ID", "ACCESS_TOKEN"])
   ],
-  devtool: prod ? false : "source-map"
+  devtool: prod ? false : "source-map",
+  devServer: {
+    historyApiFallback: true,
+  }
 };

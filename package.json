@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "contentful": "^7.6.0",
-    "remark": "^10.0.1"
+    "remark": "^10.0.1",
+    "svelte-routing": "^1.2.0"
   }
 }
