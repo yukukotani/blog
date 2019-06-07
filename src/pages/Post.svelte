@@ -23,13 +23,15 @@ function findPost(items, id) {
 </style>
 <div class="post">
   {#if !post}
-    <h2>読み込み中</h2>
+    <h1>読み込み中</h1>
   {:else}
-    <h2>{post.fields.title}</h2>
-    <div>{@html
+    <div class="markdown-body">
+      <h1>{post.fields.title}</h1>
+      {@html
       remark()
         .use(html)
         .processSync(post.fields.body).contents
-    }</div>
+      }
+    </div>
   {/if}
 </div>
