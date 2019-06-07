@@ -12,7 +12,7 @@
 </style>
 <div class="posts">
   {#if !items}
-    <h2>読み込み中</h2>
+    <h1>読み込み中</h1>
   {:else}
     {#each items as post}
       <Link to="posts/{post.sys.id}">{post.fields.title} - {post.sys.createdAt}</Link>

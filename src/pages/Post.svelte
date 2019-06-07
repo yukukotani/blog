@@ -1,5 +1,7 @@
 <script>
 import { get } from "svelte/store"
+import remark from "remark";
+import html from "remark-html";
 import { posts } from "../stores/post.js"
 export let id;
 let post = null;
@@ -8,7 +10,7 @@ posts.subscribe(value => {
     console.log(post);
 })
 
-export function findPost(items, id) {
+function findPost(items, id) {
     if (items === null) {
         return null
     }
@@ -24,6 +26,10 @@ export function findPost(items, id) {
     <h2>読み込み中</h2>
   {:else}
     <h2>{post.fields.title}</h2>
-    <div>{post.fields.body}</div>
+    <div>{@html
+      remark()
+        .use(html)
+        .processSync(post.fields.body).contents
+    }</div>
   {/if}
 </div>
