@@ -15,8 +15,21 @@
     color: purple;
     text-align: center;
   }
-  main {
+  /*
+    mobile
+  */
+  @media screen and (max-width: 600px) { 
+    main {
+    margin: 100px 20px;
+    }
+  }
+  /*
+    pc
+  */
+  @media screen and (min-width: 600px) { 
+    main {
     margin: 100px 200px;
+    }
   }
 </style>
 
