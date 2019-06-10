@@ -5,7 +5,7 @@
 Run the commands below: 
 ```bash
 npm install
-npm build
+npm run build
 ```
 
 ## Deploy
