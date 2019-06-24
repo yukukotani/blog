@@ -11,6 +11,9 @@
 </script>
 
 <style scoped>
+  main {
+    font-size: 18px;
+  }
   h1 {
     color: purple;
     text-align: center;
@@ -28,7 +31,7 @@
   */
   @media screen and (min-width: 600px) { 
     main {
-    margin: 100px 200px;
+    margin: 100px 400px;
     }
   }
 </style>
